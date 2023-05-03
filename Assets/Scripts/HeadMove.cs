@@ -38,6 +38,11 @@ public class HeadMove : MonoBehaviour
             // roda o método 'SairDoJogo()'
             SairDoJogo();
         }
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            // roda o método 'BtnRestartGame()'
+            BtnRestartGame();
+        }
     }
     private void FixedUpdate()
     {
