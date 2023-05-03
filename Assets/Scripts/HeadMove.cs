@@ -33,6 +33,11 @@ public class HeadMove : MonoBehaviour
         {
             direction = Vector2.up * yAxis;
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // roda o método 'SairDoJogo()'
+            SairDoJogo();
+        }
     }
     private void FixedUpdate()
     {
@@ -69,6 +74,13 @@ public class HeadMove : MonoBehaviour
 
         gM.hScore = PlayerPrefs.GetInt("hScore");
         gM.hScoreText.text = "H-score: " + gM.hScore.ToString();
+    }
+    public void SairDoJogo()
+    {
+        // escreve uma mensagem na aba 'Console' para termos certeza de que esse método foi chamado
+        Debug.Log("Saiu do jogo");
+        // fecha o nosso jogo
+        Application.Quit();
     }
     void GrowingSnake()
     {
