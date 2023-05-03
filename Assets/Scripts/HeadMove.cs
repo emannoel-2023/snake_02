@@ -9,11 +9,12 @@ public class HeadMove : MonoBehaviour
     [SerializeField] Transform body;
 
     GameManager gM;
-
+    AudioController audioController;
 
     private void Start()
     {
         gM = FindObjectOfType<GameManager>();
+        audioController = FindObjectOfType<AudioController>();
         snakePiecesBody = new List<Transform>();
         snakePiecesBody.Add(transform);
 
@@ -66,6 +67,7 @@ public class HeadMove : MonoBehaviour
         Time.timeScale = 1;
         transform.position = Vector2.zero;
         direction = Vector2.zero;
+        audioController.ReiniciarMusica();
 
         for (int i = 1; i < snakePiecesBody.Count; i++)
         {

@@ -11,6 +11,13 @@ public class GameManager : MonoBehaviour
     public int hScore;
     public GameObject gameOverPanel, startPanel;
 
+    AudioController audioController;
+
+
+    private void Start()
+    {
+        audioController = FindObjectOfType<AudioController>();
+    }
     public void SetScore(int value)
     {
         score += value;
@@ -26,6 +33,8 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("hScore", score);
             hScoreText.text = "New H-Score: " + score.ToString();
         }
+        audioController.PararMusica(); // Adicionando a chamada ao método PararMusica()
+
 
         Time.timeScale = 0;
     }
