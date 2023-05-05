@@ -26,6 +26,14 @@ public class AudioController : MonoBehaviour
     {
         audioSoucerMusicaFundo.Stop();
     }
+    public void PausarMusica()
+    {
+        audioSoucerMusicaFundo.Pause();
+    }
+    public void PlayMusica()
+    {
+        audioSoucerMusicaFundo.Play();
+    }
     public void ReiniciarMusica()
     {
         audioSoucerMusicaFundo.Play();

@@ -84,6 +84,20 @@ public class HeadMove : MonoBehaviour
         gM.hScoreGameOver = PlayerPrefs.GetInt("hScore");
         gM.hScoreGameOverText.text = "H-score: " + gM.hScore.ToString();
     }
+    public void PauseGame()
+    {
+        if(Time.timeScale == 1)
+        {
+            Time.timeScale = 0;
+            audioController.PausarMusica();
+        }
+        else
+        {
+            Time.timeScale = 1;
+            audioController.PlayMusica();
+        }
+        
+    }
     public void SairDoJogo()
     {
         // escreve uma mensagem na aba 'Console' para termos certeza de que esse método foi chamado
