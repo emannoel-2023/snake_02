@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public int score;
     public Text hScoreText;
     public int hScore;
+    public Text hScoreGameOverText;
+    public int hScoreGameOver;
     public GameObject gameOverPanel, startPanel;
 
     AudioController audioController;

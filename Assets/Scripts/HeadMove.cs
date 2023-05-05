@@ -81,6 +81,8 @@ public class HeadMove : MonoBehaviour
 
         gM.hScore = PlayerPrefs.GetInt("hScore");
         gM.hScoreText.text = "H-score: " + gM.hScore.ToString();
+        gM.hScoreGameOver = PlayerPrefs.GetInt("hScore");
+        gM.hScoreGameOverText.text = "H-score: " + gM.hScore.ToString();
     }
     public void SairDoJogo()
     {
